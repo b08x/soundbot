@@ -1,32 +1,45 @@
 #!/usr/bin/env bash
 
+root=/home
+
+hosts=soundbot,bender,
+
+# perhaps git-annex can be used to track system changes
+# like a git-commit for restore points
+systemback=/usr/bin/systemback
+
+
+git-annex=/usr/bin/git-annex
+
+#
+dotfiles=RCM
+
 #if [ ! -d "/mnt/bender/backups" ]; then
-#  sudo mount bender:/storage /mnt/bender
+#  sudo mount bender:/backups /mnt/bender/backups
 #fi
 
-#rsync -r -t -v --progress -s /home/b08x/studio/ /mnt/bender/backups/studio/
+rsync -r -t -p -o -g -v --progress -l -H --numeric-ids -s \
+--exclude-from=/home/b08x/Workspace/soundbot/scripts/backup/exclude02.txt \
+/home/b08x/ /mnt/bender/backups/b08x/
 
-#sudo umount /mnt/bender
+#if [ ! -d "/mnt/bender/media" ]; then
+#  sudo mount bender:/media /mnt/bender/media
+#fi
+
+# sync from bender
+rsync -r -n -g -v --progress --size-only -l -H -s \
+/mnt/bender/media/music/ /home/b08x/Storage/media/music/
+
+# sync to bender
+rsync -r -g -v --progress --delete --size-only -l -H -s \
+/home/b08x/Storage/media/music/ /mnt/bender/media/music/
 
 
-# git repos to backup;
-.dotfiles
-workspace
-#~/studio/sessions
-#~/Notebooks/Notes
-#~/workspace/*
-#yadm
-
-##cd into each dir
-##display git diff
-##prompt for commit comment
+#TODO: log output
 
 
-# sync the library to bender, if a file exists on bender that is not on soundbot it will be deleted
-rsync -r -t -p -o -g -v --progress --delete -u -l -H -z -i -s /home/b08x/studio/library/ /mnt/bender/backups/studio/library/
 
-# when syncing laptop, run rsync to pull from bender, removing anything on the laptop that is not on bender
-so,
+
 
 sync lib to bender from soundbot
 sync laptop with bender (bender pushes to laptop)

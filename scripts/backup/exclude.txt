@@ -1,0 +1,9 @@
+.*
+Storage/.Trash-1000/**
+Storage/lost+found/**
+Storage/media/**
+Storage/nerd-fonts/**
+Storage/reaper/peak_files/**
+Bitwig Studio
+lost+found
+ToguAudioLine
