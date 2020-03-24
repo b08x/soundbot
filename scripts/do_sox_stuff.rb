@@ -35,6 +35,32 @@ def run_sox_rate(tmpinputfile,outputfullpath)  # instantiate a new sox command o
   cmd.run("sox -V --temp /tmp --single-threaded '#{tmpinputfile}' -b 24 '#{outputfullpath}' rate -v -I -b 90 48k")
 end
 
+def run_sox_compand(in,out)
+  sox -V '#{tmpinputfile}' '#{outputfullpath}' compand 2,2 -60,-60,-50,-20,0,-20 -20 -60 1
+end
+
+def run_sox_spectrogram(in)
+  # for file in *.flac;do
+  #     outfile="${file%.*}.png"
+  #     sox "$file" -n spectrogram -o "$outfile"
+  # done
+
+
+  sox '#{in}' -n spectrogram -o "OUTPUTFILEPATH/OUTPUTFILENAME.png"
+end
+
+#use metaflac to alter flac tag info
+def embed_spectrogram_into_flac
+  `metaflac --import-picture-from`
+end
+
+
+def add_replay_gain_tags
+  # Since this operation requires two passes, it is always executed last,
+  # after all other operations have been completed and written to disk.
+  `metaflac --add-replay-gain`
+end
+
 def remove_unwanted_characters(filename)
   # take the original file name, and standardize
   # format by removing whitespaces, multiple underscores
@@ -80,7 +106,7 @@ def do_file_stuff_in_tmpfs
   # is shown here, as the we only care about whether
   # or not this happen. Whereas using backticks will
   # return a result.
-  unless free_memory < 1024
+  unless free_memory < 1024sox --plot
     system("mount -o remount,size=4G,noatime ~/tmpsox")
   end
 
@@ -197,7 +223,7 @@ end
 #
 #     ch = `soxi -c "#{inputfile}"`.strip.to_i
 #     sr = `soxi -r "#{inputfile}"`.strip.to_i
-#     bd = `soxi -p "#{inputfile}"`.strip.to_i
+#     bd = `soxi -p "#{inputfsox --plotile}"`.strip.to_i
 #     en = `soxi -t "#{inputfile}"`.strip
 #
 #     puts "chan: #{ch}\n samplerate: #{sr}\n bitdepth: #{bd}\n encoding: #{en}"
