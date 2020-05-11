@@ -7,3 +7,5 @@ Storage/reaper/peak_files/**
 Bitwig Studio
 lost+found
 ToguAudioLine
+Downloads
+JUCE-*/**
