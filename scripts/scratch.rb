@@ -189,6 +189,11 @@ sox -V -G david-lizmi_bass-loop-20_bass_loop_152.wav -b 24 david-lizmi_bass-loop
 bs1770gain --codec=flac --suffix=flac --track-tags --atsc ~/Studio/library/sounds/loops/111bpm_Waveform_loops/JoMoX_111bpm_Triangle.flac --overwrite -a -u shortterm-mean
 bs1770gain --codec=flac --suffix=flac --track-tags --atsc ~/Studio/library/sounds/loops/bass_loops/david-lizmi_bass-loop-20_bass_loop_152.flac --overwrite -a -u momentary-maximum --shortterm-length=3000 --momentary-length=3000
 
+bs1770gain --codec=flac --suffix=flac --track-tags \
+"/home/b08x/Studio/library/sounds/keys/SalamanderGrandPianoV3_48khz24bit/48khz24bit/A0v16.flac" \
+--overwrite -a -u momentary-mean  --shortterm-length=20000 --momentary-length=2400 \
+--momentary-mean-gate=-20
+
 # grab the length from the output of the sox stat command and convert to ms
 # new_hash = {}
 #
@@ -233,14 +238,36 @@ file_info[:dir] = file_dir_name
 file_info[:name] = file_name
 file_info[:type] = file_ext
 
-results = cmd.run("sox '#{file}' -n stat")
+results = cmd.run("sox '#{file}' -n stats")
+# 2>&1|awk '/^RMS\ lev\ dB/ {print ($4)}'
+# 2>&1|awk '/^Length\ s/ {print ($3)}'
+# results.err.each_line do |x|
+#   if x =~ /Length/
+#     k,v = x.gsub(/\s/,'').split(":")
+#     file_info[:length] = v.to_f * 1000
+#   end
+# end
+#
+# p file_info
+
 results.err.each_line do |x|
   if x =~ /Length/
-    k,v = x.gsub(/\s/,'').split(":")
-    file_info[:length] = v.to_f * 1000
+    length = x.gsub(/Length s\s+/,'')
+    file_info[:length] = length.to_f * 1000
+  end
+  if x =~ /RMS lev dB/
+    level = x.gsub(/RMS lev dB\s+/,'').split(" ").first
+    file_info[:rms] = level.to_f
+  end
+  if x =~ /Pk lev dB/
+    level = x.gsub(/Pk lev dB\s+/,'').split(" ").first
+    file_info[:peak] = level.to_f
   end
 end
-p file_info
+
+if file_info[:rms] >= -23
+  then calcuate length in terms of --shortterm-length and momentary-length
+  e.g. Length s       0.456 then --shortterm-length <= 450
 
 # adjust folder name (remove spaces, etc) and create a new folder with this
 # new name, followed by the suffix "converted"
