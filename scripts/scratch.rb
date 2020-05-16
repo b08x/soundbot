@@ -1,3 +1,13 @@
+processing organic drum sample
+
+sox --combine merge *.wav kick-loud-trap-beats.wav remix 1v0.8,2,3,4,5v0.8
+
+sox --combine merge 01-BD-11CR-BRS-BELL-L-OGDL.wav 02-SD-11CR-BRS-BELL-L-OGDL.wav 03-RM-11CR-BRS-BELL-L-OGDL.wav 11CR-BRS-BELL-L-OGDL.wav remix -
+sox --combine merge 04-OHL-11CR-BRS-BELL-L-OGDL.wav 05-OHR-11CR-BRS-BELL-L-OGDL.wav 11CR-BRS-BELL-L-OGDL.wav remix 1 2
+
+sox --combine merge *.wav KICK-LOUD-JUNGLERY.wav remix 1v0.8,3v0.2,4v0.2 1v0.8,2,3v0.2,4v0.2,5
+
+
 
 #---------------
 #!/usr/bin/env ruby
@@ -167,7 +177,7 @@ get_folder_list(@folder_contents)
 
 
 if @files.any?
-  backup(@files)
+  backup(@files)extname
   process(@files)
 end
 
@@ -249,6 +259,9 @@ results = cmd.run("sox '#{file}' -n stats")
 # end
 #
 # p file_info
+
+# get duration through soxi
+soxi -D '#{file}'
 
 results.err.each_line do |x|
   if x =~ /Length/
