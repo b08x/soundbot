@@ -6,6 +6,8 @@ APP_ROOT = File.expand_path(File.dirname(__FILE__))
 
 require 'rubygems'
 require 'commander'
+require 'extract_audio_segment'
+
 
 class Soundbot
   include Commander::Methods
@@ -56,7 +58,7 @@ class Soundbot
       c.example 'description', 'command example'
       c.option '--file FILE', 'Some switch that does something'
       c.action do |args, options|
-        c.when_called Soundbot::Commands::Info
+        p args
       end
     end
 
