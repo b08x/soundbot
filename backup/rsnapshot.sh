@@ -31,7 +31,7 @@ rsync $OPTS $SRC $SNAP/latest >> $SNAP/rsync.log
 
 COUNT=$( wc -l $SNAP/rsync.log|cut -d" " -f1 )
 if [ $COUNT -gt $MINCHANGES ] ; then
-        DATETAG=$(date +%Y-%m-%d)
+        DATETAG=$(date +%Y-%m-%d-%T)
         if [ ! -e $SNAP/$DATETAG ] ; then
                 echo "using ssh to login to bender to run the link command locally"
                 ssh bender "cp -avl /backups/b08x/latest /backups/b08x/$DATETAG"
