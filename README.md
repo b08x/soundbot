@@ -6,6 +6,7 @@
 a [backup script](https://wiki.archlinux.org/index.php/Rsync#Snapshot_backup) that uses rsync to give the illusion of a sort of de-duplicatation.
 
 - [ ] declare function to keep only so many backups
+  - [ ] look into https://github.com/ewxrjk/rsbackup
 
 # sox-tricks
 
