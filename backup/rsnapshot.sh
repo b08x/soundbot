@@ -7,7 +7,7 @@
 
 SRC="/home/b08x/" #dont forget trailing slash!
 SNAP="/mnt/bender/backups/b08x"
-OPTS="-rltgoi --delete --delay-updates --chmod=a-w --progress --exclude=*.git/** --exclude=*.svn/** --exclude-from=/home/b08x/Workspace/soundbot/scripts/backup/exclude.txt"
+OPTS="-rltgoi --delay-updates --chmod=a-w --progress --exclude=*.git/** --exclude=*.svn/** --exclude-from=/home/b08x/Workspace/soundbot/backup/exclude.txt"
 MINCHANGES=20
 
 # run this process with real low priority
@@ -31,7 +31,7 @@ rsync $OPTS $SRC $SNAP/latest >> $SNAP/rsync.log
 
 COUNT=$( wc -l $SNAP/rsync.log|cut -d" " -f1 )
 if [ $COUNT -gt $MINCHANGES ] ; then
-        DATETAG=$(date +%Y-%m-%d-%T)
+        DATETAG=$(date +%Y-%m-%d-%H%M%S)
         if [ ! -e $SNAP/$DATETAG ] ; then
                 echo "using ssh to login to bender to run the link command locally"
                 ssh bender "cp -avl /backups/b08x/latest /backups/b08x/$DATETAG"
