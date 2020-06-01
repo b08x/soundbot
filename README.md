@@ -3,10 +3,8 @@
 
 # backups
 
-a [backup script](https://wiki.archlinux.org/index.php/Rsync#Snapshot_backup) that uses rsync to give the illusion of a sort of de-duplicatation.
+Currently using [backupninja](https://wiki.herzbube.ch/index.php/Backupninja)
 
-- [ ] declare function to keep only so many backups
-  - [ ] look into https://github.com/ewxrjk/rsbackup
 
 # sox-tricks
 
@@ -16,6 +14,7 @@ bash functions to manipulate sound files for various reasons
 
 - [ ] add dotfiles as a submodule
 - [ ] add linuxsampler stuff ""
+  - [ ] ?
 - [ ] add reaper templates/configs
 - [ ] ray-sessions
 - [ ] notes?

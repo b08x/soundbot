@@ -35,3 +35,5 @@
 # lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/woodwinds' '/home/b08x/Studio/library/sounds/woodwinds'
 # OK
 # lscp=#
+INSTRUMENT NON_MODAL '/home/b08x/Studio/library/sounds/sfx/Earthbound_NEW.sf2
+ADD DB_INSTRUMENTS NON_MODAL '/collections' '/home/b08x/Studio/library/sounds/collections/oh_multi_preset.sf2'
