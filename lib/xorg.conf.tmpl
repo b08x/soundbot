@@ -36,20 +36,27 @@ EndSection
 
 Section "Monitor"
   Identifier "HDMI1"
-  Option "PreferredMode" "1920x1080"
+  Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+  Option "PreferredMode" "1920x1080_60.00"
   Option "LeftOf" "HDMI2"
+  Option "Position" "0 0"
+  Option "DPMS" "true"
 
 EndSection
 
 Section "Monitor"
   Identifier "HDMI2"
-  Option "PreferredMode" "1920x1080"
+  Modeline "1680x1050_60.00"  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync
+  Option "PreferredMode" "1680x1050_60.00"
   Option "RightOf" "HDMI1"
+  Option "Position" "1920 0"
+  Option "Rotate" "left"
+  Option "DPMS" "true"
 EndSection
 
 Section "Device"
   Identifier  "Intel"
-  #Option      "AccelMethod"  #"uxa"
+  Option      "TearFree" "true"
   Driver      "intel"
   BusID       "PCI:0:2:0"
 EndSection
@@ -62,6 +69,6 @@ Section "Screen"
   DefaultDepth 24
   SubSection "Display"
     Depth 24
-    Virtual 3840 1080
+    Virtual 2970 1680
   EndSubSection
 EndSection
