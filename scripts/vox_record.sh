@@ -14,12 +14,11 @@ ZITA_PID="$!"
 
 sleep 1
 
-timemachine -a -b -20.0 -e -35.0 -T 30 -t 30 powermic:capture_1 -f wav -s -p "$RECORDINGS/tm-" &
+timemachine -a -b -20.0 -e -35.0 -T 15 -t 30 powermic:capture_1 -f wav -s -p "$RECORDINGS/tm-" &
 
 wait
 
 
 
 
-#ideally, when closing timemachine, the zita process would also stop. as it stands, which is an odd way of explaining current circumstances, the zita prcess remains running in the background after timemachine is closed.
-#I'm not sure if I care about this? Well, if I had the time to be particular, sure this is a nice detail.
+#TODO: close zita-a2j when timemachine exits
