@@ -14,7 +14,7 @@ ZITA_PID="$!"
 
 sleep 1
 
-timemachine -t 30 powermic:capture_1 -f wav -s -p "$RECORDINGS/tm-" &
+timemachine -a -b -20.0 -e -35.0 -T 30 -t 30 powermic:capture_1 -f wav -s -p "$RECORDINGS/tm-" &
 
 wait
 
