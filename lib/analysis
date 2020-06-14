@@ -1,0 +1,5 @@
+
+
+audiowaveform -i 17724_suonho_elements_earth_01_spaceship_overview_t_faded_n.flac \
+-o test2.png --waveform-color b125f9 --background-color 1d1d1d --amplitude-scale auto \
+-z auto -w 1000 -h 300 --split-channels

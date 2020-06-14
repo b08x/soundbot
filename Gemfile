@@ -13,3 +13,6 @@ gem 'streamio-ffmpeg'
 
 gem 'commander'
 gem 'terminal-table'
+
+gem 'audio_waveform-ruby', :require => 'audio_waveform',
+    :git => 'https://github.com/bbc/audio_waveform-ruby.git'

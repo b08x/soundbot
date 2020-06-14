@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+
+RECORDINGS="$HOME/Notebooks/voice_notes"
+
+
+
+zita-a2j -j powermic -d hw:PowerMicIINS -c 1 &
+ZITA_PID="$!"
+
+
+sleep 1
+
+timemachine -t 15 powermic:capture_1 -f wav -s -p "$RECORDINGS/tm-" &
+TM_PID="$!"
+
+
+
+cleanup() {
+    echo "Cleaning stuff up..."
+    kill -9 $TM_PID
+    exit
+}
+
+
+trap cleanup INT TERM
+echo ' --- press ENTER to close --- '
+wait
+read var
+cleanup
+
+
+
+
+#wait
+
+
+
+
+#bindsym mod+Shift+insert pkill -9 timemachine
+
+
+#TODO: close zita-a2j when timemachine exits
+#when launched from terminal, closing does also close the zita process
+# when using 'mod+Shift+q' to close timemachine, the zita process will stay open, leaving
+# vox record to rename a process as well...heh. grammar.
