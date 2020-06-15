@@ -36,7 +36,7 @@ def set_alsa
   cmd.run("amixer -D hw:0 sset Surround,0 58 unmute")
   cmd.run("amixer -D hw:0 sset Center,0 58 mute")
   cmd.run("amixer -D hw:0 sset LFE,0 58 mute")
-  cmd.run("amixer -D hw:0 sset Side,0 58 unmute")
+  #cmd.run("amixer -D hw:0 sset Side,0 58 unmute")
   cmd.run("amixer -D hw:0 set PCM 90%")
 
 end
