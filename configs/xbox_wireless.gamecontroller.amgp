@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gamecontroller configversion="19" appversion="2.25">
+    <!--The SDL name for a joystick is included for informational purposes only.-->
+    <sdlname>X360 Wireless Controller</sdlname>
+    <!--The Unique ID for a joystick is included for informational purposes only.-->
+    <uniqueID>030000005e040000a1020000070100001118673</uniqueID>
+    <stickAxisAssociation index="2" xAxis="3" yAxis="4"/>
+    <stickAxisAssociation index="1" xAxis="1" yAxis="2"/>
+    <vdpadButtonAssociations index="1">
+        <vdpadButtonAssociation axis="0" button="12" direction="1"/>
+        <vdpadButtonAssociation axis="0" button="13" direction="4"/>
+        <vdpadButtonAssociation axis="0" button="14" direction="8"/>
+        <vdpadButtonAssociation axis="0" button="15" direction="2"/>
+    </vdpadButtonAssociations>
+    <names>
+        <controlstickname index="2">R Stick</controlstickname>
+        <controlstickname index="1">L Stick</controlstickname>
+    </names>
+    <sets>
+        <set index="8">
+            <stick index="2">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <stick index="1">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <trigger index="6">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+            <trigger index="5">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+        </set>
+        <set index="7">
+            <stick index="2">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <stick index="1">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <trigger index="6">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+            <trigger index="5">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+        </set>
+        <set index="6">
+            <stick index="2">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <stick index="1">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <trigger index="6">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+            <trigger index="5">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+        </set>
+        <set index="5">
+            <stick index="2">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <stick index="1">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <trigger index="6">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+            <trigger index="5">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+        </set>
+        <set index="4">
+            <stick index="2">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <stick index="1">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <trigger index="6">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+            <trigger index="5">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+        </set>
+        <set index="3">
+            <stick index="2">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <stick index="1">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <trigger index="6">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+            <trigger index="5">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+        </set>
+        <set index="2">
+            <stick index="2">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <stick index="1">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>45</diagonalRange>
+            </stick>
+            <trigger index="6">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+            <trigger index="5">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+            </trigger>
+        </set>
+        <set index="1">
+            <stick index="2">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>65</diagonalRange>
+                <stickbutton index="7">
+                    <slots>
+                        <slot>
+                            <code>3</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </stickbutton>
+                <stickbutton index="5">
+                    <slots>
+                        <slot>
+                            <code>2</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </stickbutton>
+                <stickbutton index="3">
+                    <slots>
+                        <slot>
+                            <code>4</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </stickbutton>
+                <stickbutton index="1">
+                    <slots>
+                        <slot>
+                            <code>1</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </stickbutton>
+            </stick>
+            <stick index="1">
+                <calibrated>false</calibrated>
+                <summary></summary>
+                <diagonalRange>65</diagonalRange>
+                <stickbutton index="7">
+                    <slots>
+                        <slot>
+                            <code>3</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </stickbutton>
+                <stickbutton index="5">
+                    <slots>
+                        <slot>
+                            <code>2</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </stickbutton>
+                <stickbutton index="3">
+                    <slots>
+                        <slot>
+                            <code>4</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </stickbutton>
+                <stickbutton index="1">
+                    <slots>
+                        <slot>
+                            <code>1</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </stickbutton>
+            </stick>
+            <trigger index="6">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+                <triggerbutton index="2">
+                    <slots>
+                        <slot>
+                            <code>5</code>
+                            <mode>mousebutton</mode>
+                        </slot>
+                    </slots>
+                </triggerbutton>
+            </trigger>
+            <trigger index="5">
+                <center_value>0</center_value>
+                <min_value>-32767</min_value>
+                <max_value>32767</max_value>
+                <throttle>normal</throttle>
+                <triggerbutton index="2">
+                    <slots>
+                        <slot>
+                            <code>4</code>
+                            <mode>mousebutton</mode>
+                        </slot>
+                    </slots>
+                </triggerbutton>
+            </trigger>
+            <button index="11">
+                <slots>
+                    <slot>
+                        <code>0x1000022</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                    <slot>
+                        <code>0x1000014</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                </slots>
+            </button>
+            <button index="10">
+                <slots>
+                    <slot>
+                        <code>0x1000022</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                    <slot>
+                        <code>0x1000012</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                </slots>
+            </button>
+            <button index="3">
+                <slots>
+                    <slot>
+                        <code>1</code>
+                        <mode>mousebutton</mode>
+                    </slot>
+                </slots>
+            </button>
+        </set>
+    </sets>
+</gamecontroller>

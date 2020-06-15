@@ -1,0 +1,10 @@
+# Exported by: JSampler - a java front-end for LinuxSampler
+# Version: 0.9
+# Date: Sun Jun 14 18:09:23 EDT 2020
+
+RESET
+
+SET VOLUME 0.35
+
+REMOVE MIDI_INSTRUMENT_MAP ALL
+

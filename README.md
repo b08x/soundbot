@@ -3,8 +3,7 @@
 
 # backups
 
-Currently using [backupninja](https://wiki.herzbube.ch/index.php/Backupninja)
-
+~~Currently using [backupninja](https://wiki.herzbube.ch/index.php/Backupninja)~~
 
 # sox-tricks
 
