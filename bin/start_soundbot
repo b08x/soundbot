@@ -18,7 +18,7 @@ def start_jack
   eps driver alsa \
   eps realtime True \
   eps realtime-priority 80 \
-  eps verbose True \
+  eps verbose False \
   eps client-timeout 1000")
 
   sleep 1
@@ -40,6 +40,9 @@ def set_alsa
   cmd.run("amixer -D hw:0 set PCM 90%")
 
 end
+
+
+# sudo modprobe snd_virmidi midi_devs=1
 
 set_alsa
 start_jack
