@@ -1,0 +1,11 @@
+/zita-lrx	2  3
+
+/chann/label	1  L
+/chann/label	2  R
+
+/fband/suffix	1  sub
+/fband/suffix	2  mid
+/fband/suffix	3  high
+
+/xover/freq	1  200
+/xover/freq	2  2000	

@@ -1,0 +1,45 @@
+# Example zita-lrx configuration.
+#
+# Bi-amplified stereo system with single subwoofer.
+# Linkwitz-Riley crossover at 80 Hz.
+# Modified LR at 3 kHz, crossover gain = -4dB
+# Mid band amplified by 2 dB and delayed by 0.4 ms.
+
+
+# Two channels, three frequency bands.
+#
+/zita-lrx       2  3
+
+# Channel names.
+#
+/chann/label    1  L
+/chann/label    2  R
+
+# Output port suffixes.
+#
+/fband/suffix   1  sub
+/fband/suffix   2  mid
+/fband/suffix   3  high
+
+# Xover filters, first is Linkwitz-Riley, second is modified.
+/xover/freq     1  80
+/xover/freq     2  3000
+/xover/shape    2  -4.0  
+
+# Subwoofer signals are summed on first output.
+#
+#/chann/connect  1  1  system:playback_1
+#/chann/connect  2  1  system:playback_1
+
+# MF amplifier on outputs 3 and 4, 2 dB gain, 0.4 ms delay.
+#
+/fband/gain     2  2.0
+/fband/delay    2  0.4
+#/chann/connect  1  2  system:playback_3
+#/chann/connect  2  2  system:playback_4
+
+# HF amplifier on outputs 5 and 6.
+#
+#/chann/connect  1  3  system:playback_5
+#/chann/connect  2  3  system:playback_6
+

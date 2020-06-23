@@ -1,0 +1,42 @@
+/zita-lrx	2  4
+
+/chann/label	1  L
+/chann/label	2  R
+
+# 0-250
+/fband/suffix	1  bass
+
+# 250 - 2000
+/fband/suffix	2  mids
+
+# 2000 - 6000
+/fband/suffix	3  presence
+
+# 6000 - 20000
+/fband/suffix	4  high
+
+
+/xover/freq	1  250
+/xover/freq	2  2000
+/xover/freq	3  6000
+
+/chann/connect 1 1 "Non-Mixer\(xover):bass0250/in-1"
+/chann/connect 2 1 "Non-Mixer\(xover):bass0250/in-1"
+
+
+# e.g. raise the gain on /fband/suffix 2 and add a delay
+#/fband/gain     2  2.0
+#/fband/delay    2  0.4
+
+/chann/connect 1 2 "Non-Mixer\(xover):mids2504k/in-1"
+/chann/connect 2 2 "Non-Mixer\(xover):mids2504k/in-2"
+
+
+
+/chann/connect 1 3 "Non-Mixer\(xover):presence4k6k/in-1"
+/chann/connect 2 3 "Non-Mixer\(xover):presence4k6k/in-2"
+
+
+
+/chann/connect 1 4 "Non-Mixer\(xover):high6k20k/in-1"
+/chann/connect 2 4 "Non-Mixer\(xover):high6k20k/in-2"

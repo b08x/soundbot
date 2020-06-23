@@ -1,0 +1,26 @@
+/zita-lrx	2  5
+
+/chann/label	1  L
+/chann/label	2  R
+
+# 0-60
+/fband/suffix	1 subbass
+
+# 60 - 250
+/fband/suffix	2 bass
+
+# 250 - 2000
+/fband/suffix	3 midprange
+
+# 2000 - 4000
+/fband/suffix	4 uppermids
+
+# 4000 - 20000
+#/fband/suffix	5 presence
+
+
+
+/xover/freq	1  60
+/xover/freq	2  250
+/xover/freq	3  2000
+/xover/freq	4  4000
