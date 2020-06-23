@@ -4,3 +4,6 @@
 [submodule "lsmi"]
 	path = lsmi
 	url = git@github.com:b08x/lsmi.git
+[submodule "makesfz"]
+	path = makesfz
+	url = git@github.com:rock-hopper/makesfz.git
