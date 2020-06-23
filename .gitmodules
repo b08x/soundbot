@@ -7,3 +7,6 @@
 [submodule "makesfz"]
 	path = makesfz
 	url = git@github.com:rock-hopper/makesfz.git
+[submodule "spectro"]
+	path = spectro
+	url = git@github.com:b08x/spectro.git
