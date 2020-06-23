@@ -1,3 +1,6 @@
 [submodule "sox-tricks"]
 	path = sox-tricks
 	url = git@github.com:b08x/sox-tricks.git
+[submodule "lsmi"]
+	path = lsmi
+	url = git@github.com:b08x/lsmi.git
