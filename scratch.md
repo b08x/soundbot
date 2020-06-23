@@ -8,3 +8,5 @@
 9241  find . -type f -exec rename 's/\"/'in'/g' {} +
 9242  find . -type d -exec rename 's/\s+/_/g' {} +
 9243  find . -type d -exec rename 's/\:/_/g' {} +
+find . -type f -exec chmod 0664 {} +
+find . -type f -exec chmod 2775 {} +
