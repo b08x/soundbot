@@ -15,6 +15,9 @@ def start_jack
   dps period 1024 \
   dps nperiods 3 \
   dps midi-driver seq \
+  dps monitor true \
+  dps inchannels 2 \
+  dps outchannels 2 \
   eps driver alsa \
   eps realtime True \
   eps realtime-priority 80 \
