@@ -1,23 +1,32 @@
-# files related to sound production
+# Tools for sound production
 
 
-# backups
+various scripts and a few submodules used for various aspects of sound production
 
-~~Currently using [backupninja](https://wiki.herzbube.ch/index.php/Backupninja)~~
+## backups
 
-# sox-tricks
+timeshift
+
+## sox-tricks
 
 bash functions to manipulate sound files for various reasons
 
-# TODO
+## spectro
 
-- [ ] add dotfiles as a submodule
-- [ ] add linuxsampler stuff ""
-  - [ ] ?
-- [ ] add reaper templates/configs
-- [ ] ray-sessions
-- [ ] notes?
-- [ ] applications used
-- [ ]
+generate spectrograms
 
-# other stuff
+## lsmi
+
+use a computer keyboard as a midi controller
+
+## makesfz
+
+generate sfz files
+
+## other tools
+
+bpm-tools
+dr14_meter
+ranger
+
+### other stuff
