@@ -17,7 +17,7 @@ def start_jack
   dps midi-driver seq \
   dps monitor true \
   dps inchannels 2 \
-  dps outchannels 2 \
+  dps outchannels 6 \
   eps driver alsa \
   eps realtime True \
   eps realtime-priority 80 \
@@ -34,21 +34,38 @@ def set_alsa
   cmd = TTY::Command.new(printer: :pretty)
   # set master, headphone and PCM, make sure they're not muted and
   # mute the speaker
-  cmd.run("amixer -D hw:0 sset PCM,0 58 unmute")
+  cmd.run("amixer -D hw:0 sset Master,0 58 unmute")
+  cmd.run("amixer -D hw:0 sset Headphone,0 0 mute")
   cmd.run("amixer -D hw:0 sset Front,0 58 unmute")
   cmd.run("amixer -D hw:0 sset Surround,0 58 unmute")
-  cmd.run("amixer -D hw:0 sset Center,0 58 mute")
-  cmd.run("amixer -D hw:0 sset LFE,0 58 mute")
-  #cmd.run("amixer -D hw:0 sset Side,0 58 unmute")
+  cmd.run("amixer -D hw:0 sset Center,0 0 mute")
+  cmd.run("amixer -D hw:0 sset LFE,0 0 mute")
+  cmd.run("amixer -D hw:0 sset Capture,0 0 mute")
   cmd.run("amixer -D hw:0 set PCM 90%")
 
 end
 
+def load_virt_midi
+  cmd = TTY::Command.new(printer: :pretty)
+  cmd.run("sudo modprobe snd_virmidi midi_devs=1")
+end
 
-# sudo modprobe snd_virmidi midi_devs=1
+def stop_pulse
+  cmd = TTY::Command.new(printer: :pretty)
+  cmd.run("systemctl --user stop pulseaudio.service")
+  cmd.run("systemctl --user stop pulseaudio.socket")
+end
 
+def start_pulse
+  cmd = TTY::Command.new(printer: :pretty)
+  cmd.run("systemctl --user start pulseaudio.service")
+end
+
+stop_pulse
+sleep 0.5
 set_alsa
 start_jack
+
 
 # prompt = TTY::Prompt.new
 #
