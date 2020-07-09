@@ -28,18 +28,18 @@
 
 # Subwoofer signals are summed on first output.
 #
-#/chann/connect  1  1  system:playback_1
-#/chann/connect  2  1  system:playback_1
+/chann/connect  1  1  system:playback_1
+/chann/connect  2  1  system:playback_1
 
 # MF amplifier on outputs 3 and 4, 2 dB gain, 0.4 ms delay.
 #
 /fband/gain     2  2.0
 /fband/delay    2  0.4
-#/chann/connect  1  2  system:playback_3
-#/chann/connect  2  2  system:playback_4
+/chann/connect  1  2  system:playback_3
+/chann/connect  2  2  system:playback_4
 
 # HF amplifier on outputs 5 and 6.
 #
-#/chann/connect  1  3  system:playback_5
-#/chann/connect  2  3  system:playback_6
+/chann/connect  1  3  system:playback_5
+/chann/connect  2  3  system:playback_6
 

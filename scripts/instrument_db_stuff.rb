@@ -16,23 +16,23 @@
 #puts "#{@x}"
 
 
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/brass' '/home/b08x/Studio/library/sounds/brass'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/brass' '/home/b08x/Studio/library/sounds/soundfonts/brass'
 # OK
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/collections' '/home/b08x/Studio/library/sounds/collections'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/collections' '/home/b08x/Studio/library/sounds/soundfonts/collections'
 # OK
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/keys' '/home/b08x/Studio/library/sounds/keys'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/keys' '/home/b08x/Studio/library/sounds/soundfonts/keys'
 # OK
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/loops' '/home/b08x/Studio/library/sounds/loops'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/loops' '/home/b08x/Studio/library/sounds/soundfonts/loops'
 # OK
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/percussions' '/home/b08x/Studio/library/sounds/percussions'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/percussions' '/home/b08x/Studio/library/sounds/soundfonts/percussions'
 # OK
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/sfx' '/home/b08x/Studio/library/sounds/sfx'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/sfx' '/home/b08x/Studio/library/sounds/soundfonts/sfx'
 # OK
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/strings' '/home/b08x/Studio/library/sounds/strings'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/strings' '/home/b08x/Studio/library/sounds/soundfonts/strings'
 # OK
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/synths' '/home/b08x/Studio/library/sounds/synths'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/synths' '/home/b08x/Studio/library/sounds/soundfonts/synths'
 # OK
-# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/woodwinds' '/home/b08x/Studio/library/sounds/woodwinds'
+# lscp=# ADD DB_INSTRUMENTS RECURSIVE FILE_AS_DIR '/woodwinds' '/home/b08x/Studio/library/sounds/soundfonts/winds'
 # OK
 # lscp=#
 INSTRUMENT NON_MODAL '/home/b08x/Studio/library/sounds/sfx/Earthbound_NEW.sf2

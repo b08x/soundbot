@@ -55,4 +55,4 @@ end
 
 #set_bpm(60)
 #start_transport
-stop_transport
+#stop_transport

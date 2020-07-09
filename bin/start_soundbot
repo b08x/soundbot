@@ -10,19 +10,19 @@ def start_jack
 
   cmd = TTY::Command.new(printer: :pretty)
   cmd.run("jack_control start \
-  dps device 'hw:PCH' \
-  dps rate 96000 \
-  dps period 1024 \
-  dps nperiods 3 \
-  dps midi-driver seq \
-  dps monitor true \
-  dps inchannels 2 \
-  dps outchannels 6 \
-  eps driver alsa \
-  eps realtime True \
-  eps realtime-priority 80 \
-  eps verbose False \
-  eps client-timeout 1000")
+            dps device 'hw:PCH' \
+            dps rate 48000 \
+            dps period 1024 \
+            dps nperiods 3 \
+            dps midi-driver seq \
+            dps monitor true \
+            dps inchannels 2 \
+            dps outchannels 6 \
+            eps driver alsa \
+            eps realtime True \
+            eps realtime-priority 90 \
+            eps verbose False \
+            eps client-timeout 1000")
 
   sleep 1
 

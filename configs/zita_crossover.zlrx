@@ -8,4 +8,12 @@
 /fband/suffix	3  high
 
 /xover/freq	1  200
-/xover/freq	2  2000	
+/xover/freq	2  2000
+
+/chann/connect	1 1 Non-Mixer/sub:in-1
+
+/chann/connect 1 2 Non-Mixer/midrange:in-1
+/chann/connect 1 2 Non-Mixer/midrange:in-2
+
+/chann/connect 1 2 Non-Mixer/high:in-1
+/chann/connect 1 2 Non-Mixer/high:in-2
