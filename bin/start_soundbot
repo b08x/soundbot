@@ -10,14 +10,14 @@ def start_jack
 
   cmd = TTY::Command.new(printer: :pretty)
   cmd.run("jack_control start \
-            dps device 'hw:PCH' \
+            dps device 'hw:0' \
             dps rate 48000 \
             dps period 1024 \
             dps nperiods 3 \
             dps midi-driver seq \
             dps monitor true \
             dps inchannels 2 \
-            dps outchannels 6 \
+            dps outchannels 8 \
             eps driver alsa \
             eps realtime True \
             eps realtime-priority 90 \
@@ -37,7 +37,8 @@ def set_alsa
   cmd.run("amixer -D hw:0 sset Master,0 58 unmute")
   cmd.run("amixer -D hw:0 sset Headphone,0 0 mute")
   cmd.run("amixer -D hw:0 sset Front,0 58 unmute")
-  cmd.run("amixer -D hw:0 sset Surround,0 58 unmute")
+  cmd.run("amixer -D hw:0 sset Side,0 58 unmute")
+  cmd.run("amixer -D hw:0 sset Surround,0 0 mute")
   cmd.run("amixer -D hw:0 sset Center,0 0 mute")
   cmd.run("amixer -D hw:0 sset LFE,0 0 mute")
   cmd.run("amixer -D hw:0 sset Capture,0 0 mute")
