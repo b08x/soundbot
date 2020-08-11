@@ -14,7 +14,7 @@ def start_jack
             dps rate 48000 \
             dps period 1024 \
             dps nperiods 3 \
-            dps midi-driver seq \
+            dps midi-driver raw \
             dps monitor true \
             dps inchannels 2 \
             dps outchannels 8 \
@@ -37,8 +37,8 @@ def set_alsa
   cmd.run("amixer -D hw:0 sset Master,0 58 unmute")
   cmd.run("amixer -D hw:0 sset Headphone,0 0 mute")
   cmd.run("amixer -D hw:0 sset Front,0 58 unmute")
-  cmd.run("amixer -D hw:0 sset Side,0 58 unmute")
-  cmd.run("amixer -D hw:0 sset Surround,0 0 mute")
+  cmd.run("amixer -D hw:0 sset Surround,0 58 unmute")
+  cmd.run("amixer -D hw:0 sset Side,0 0 mute")
   cmd.run("amixer -D hw:0 sset Center,0 0 mute")
   cmd.run("amixer -D hw:0 sset LFE,0 0 mute")
   cmd.run("amixer -D hw:0 sset Capture,0 0 mute")
